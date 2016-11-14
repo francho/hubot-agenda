@@ -63,16 +63,15 @@ module.exports = (robot) ->
       count = events.length
 
       if count is 0
-        robot.send room: config.room, 'You have no scheduled events tomorrow.'
         return
 
-      text = "You have #{count} scheduled event#{pl count} tomorrow.\n"
+      text = "Hay #{count} evento#{pl count} mañana.\n"
       text += events.map (e) ->
         location = if e.location then " @#{e.location}" else ''
         start = e.start.format('HH:mm')
         end = e.end.format('HH:mm')
         time = if start is '00:00' and end is '00:00'
-          'all day'
+          'todo el día'
         else
           "#{start} - #{end}"
         "#{e.summary}#{location} (#{time})"
