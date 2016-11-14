@@ -1,16 +1,16 @@
 {
-  "name": "hubot-ical-notifier",
-  "description": "Notifies schedule for tomorrow from registered iCal calendars",
+  "name": "hubot-agenda",
+  "description": "Notifies schedule for tomorrow from registered iCal calendars (in spanish)",
   "version": "0.0.3",
-  "author": "Ryota Kameoka <kameoka.ryota@gmail.com>",
+  "author": "Francho <lab@francho.org>",
   "license": "MIT",
   "keywords": "hubot, hubot-scripts, calendar, iCal",
   "repository": {
     "type": "git",
-    "url": "git://github.com/ryota-ka/hubot-ical-notifier.git"
+    "url": "git://github.com/francho/hubot-agenda.git"
   },
   "bugs": {
-    "url": "https://github.com/ryota-ka/hubot-ical-notifier/issues"
+    "url": "https://github.com/francho/hubot-agenda/issues"
   },
   "dependencies": {
     "async": "^0.9.0",
