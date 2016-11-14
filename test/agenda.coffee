@@ -10,7 +10,7 @@ describe 'ical-notifier', ->
       respond: sinon.spy()
       hear: sinon.spy()
 
-    require('../src/ical-notifier')(@robot)
+    require('../src/agenda')(@robot)
 
   it 'registers cal:add listener', ->
     expect(@robot.respond).to.have.been.calledWith(/cal:add (.+)/)
