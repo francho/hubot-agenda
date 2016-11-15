@@ -75,9 +75,10 @@ module.exports = (robot) ->
         else
           "#{start} - #{end}"
         "#{e.summary}#{location} (#{time})"
-      .join "\n"
+      .
+      join "\n"
 
-      robot.send { room: config.room }, text
+      robot.send {room: config.room}, text
 
 
   robot.respond /cal:add (.+)/, (msg) ->
@@ -106,4 +107,11 @@ module.exports = (robot) ->
 
   robot.respond /cal:clear/, (msg) ->
     clearCalendarList()
+    msg.send 'All calendars have been cleared.'
+
+  robot.respond /cal:delete (.+)/, (msg) ->
+    oldCal = msg.match[1]
+    cals = robot.brain.get 'calendars'
+    cals = cals.filter (url) -> url isnt oldCal
+    robot.brain.set 'calendars', cals
     msg.send 'All calendars have been cleared.'
