@@ -114,4 +114,4 @@ module.exports = (robot) ->
     cals = robot.brain.get 'calendars'
     cals = cals.filter (url) -> url isnt oldCal
     robot.brain.set 'calendars', cals
-    msg.send 'All calendars have been cleared.'
+    msg.send "Calendar #{oldCal} has been removed"
